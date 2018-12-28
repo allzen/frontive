@@ -1,0 +1,48 @@
+/*MAIN SETTINGS*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:#13132F;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*NAVBAR*/
+.navbar {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+
+.hamburger {
+    width: 50px;
+}
+/* .main-nav {
+    list-style-type: none;
+} */
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+}
+
+/*HEADER*/
+.header-img {
+    background-image: url('images/home-slide01.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw;
+    height: 70vh;
+    display: flex;
+}
