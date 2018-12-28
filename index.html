@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Frontive - 1</title>
 </head>
+
 <body>
-    
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <img src="images/hamburger-icon.png" alt="hamburger-icon" class="hamburger">
+        </span>
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="page-logo" class="logo-img">
+        </a>
+        <ul class="main-nav" id="nav-menu">
+            <li>
+                <a href="#" class="nav-links">Dodaj herosa</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Edytuj herosa</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Usuń herosa</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Wyczyść bazę</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Wczytaj herosów</a>
+            </li>
+    </nav>
+    <header>
+        <img src="images/home-slide01.jpg" alt="header-image" class="header-img">
+    </header>
+    <section class="basket-section">
+        <div class="basket">
+            <h2 class="basket-title">Koszyk</h2>
+            <h2 class="price">Do zapłaty:</h2>
+        </div>
+        <p class="basket-info">Twój koszyk jest pusty</p>
+    </section>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero">
+                <img id="superman" src="images/superman.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+            <div class="hero">
+                <img id="hulk" src="images/hulk.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+            <div class="hero">
+                <img id="thor" src="images/thor.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+            <div class="hero">
+                <img id="ironman" src="images/ironman.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+            <div class="hero">
+                <img id="harrypotter" src="images/harrypotter.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+            <div class="hero">
+                <img id="batman" src="images/batman.jpg" class="hero-img">
+                <div class="hero-description">
+                    <h3 class="hero-name">Superman</h3>
+                    <p class="hero-price">Cena najmu:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="footer-text">
+            Need a hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o JavaScript
+        </p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
