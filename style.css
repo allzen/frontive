@@ -10,12 +10,17 @@
 }
 
 body {
-    background-color:white;
+    background-color: white;
 }
 
 a {
     text-decoration: none;
     color: white;
+}
+
+/*VARIABLES*/
+:root {
+    --main-violet: #261d52;
 }
 
 /*NAVBAR*/
@@ -24,8 +29,33 @@ a {
     text-transform: uppercase;
     position: sticky;
     top: 0;
+    animation-name: header-fade;
+    animation-duration: 2s;
+    background-color: rgba(38,29,82, 0.7);
+
 }
 
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    transition: all 2s ease-in-out;
+  }
+  .scroll {
+    background-color: rgba(38,29,82, 0.85);
+  }
+
+/* @keyframes header-fade {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+} */
 .navbar-toggle {
     position: absolute;
     top: 10px;
@@ -114,23 +144,41 @@ header {
     }
 }
 /*BASKET*/
+.basket-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    width: 61vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid var(--main-violet);
+}
+
+.basket-title {
+    padding-right: 150px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--main-violet);
+}
+
 .basket {
     width: 80vw;
     display: flex;
+    justify-content: space-between;
 }
 
 /*HEROES SECTION*/
 .hero-container {
     margin: 0 auto;
     padding-top: 50px;
-    width: 80vw;
+    width: 70vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .hero {
-    margin: 20px;
+    margin: 10px;
 }
 
 .hero-img {
@@ -143,7 +191,7 @@ header {
 
 /*FOOTER*/
 footer {
-    background-color: #261d52;
+    background-color: var(--main-violet);
     max-width: 100vw;
     height: 50px;
     display: flex;
