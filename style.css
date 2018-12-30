@@ -31,7 +31,6 @@ a {
     top: 0;
     animation-name: header-fade;
     animation-duration: 2s;
-    background-color: rgba(38,29,82, 0.7);
 
 }
 
@@ -42,20 +41,13 @@ a {
     background-color: transparent;
     transition: all 2s ease-in-out;
   }
+  
   .scroll {
-    background-color: rgba(38,29,82, 0.85);
+    background: linear-gradient(rgba(32, 32, 32, 0.95), 100%, rgba(26, 26, 26, 0.2));
+    border-bottom: 1px solid var(--main-violet);
+    z-index: 9000;
   }
 
-/* @keyframes header-fade {
-    0% {
-        opacity: 0;
-        bottom: -50px;
-    }
-    100% {
-        opacity: 1;
-        bottom: 0;
-    }
-} */
 .navbar-toggle {
     position: absolute;
     top: 10px;
@@ -130,8 +122,8 @@ a {
 header {
     margin-top: -100px;  
 }
+
 .header-img {
-    /* background-image: url('images/home-slide01.jpg'); */
     background-size: cover;
     background-position: 70% 60%;
     max-width: 100%;
@@ -143,6 +135,7 @@ header {
         height: 60vw;
     }
 }
+
 /*BASKET*/
 .basket-container {
     margin: 0 auto;
@@ -179,10 +172,49 @@ header {
 
 .hero {
     margin: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-add-box {
+    opacity: 0;
+    width: 300px;
+    min-height: 400px;
+    position: absolute;
+    z-index: 2;
+    transition: 1s;
+}
+
+.hero-add-box:hover {
+    opacity: 1;
+}
+
+button.hero-add {
+    color: white;
+    border: none;
+    text-align: center;
+    width: 300px;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    position: relative;
+    top: 280px;
+    padding: 20px;
+    z-index: 3;
+    background: rgba(0,0,0, 0.5); 
+    cursor: pointer;
+    outline: var(--main-violet);
+}
+
+button.hero-add:active {
+    color: rgb(212, 212, 212);
 }
 
 .hero-img {
     width: 300px;
+    position: relative;
+    top: 0;
 }
 
 .hero-description {
