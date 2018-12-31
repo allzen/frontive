@@ -43,7 +43,7 @@ a {
   }
   
   .scroll {
-    background: linear-gradient(rgba(32, 32, 32, 0.95), 100%, rgba(26, 26, 26, 0.2));
+    background:rgba(32, 32, 32, 0.95);
     border-bottom: 1px solid var(--main-violet);
     z-index: 9000;
   }
@@ -144,7 +144,7 @@ header {
     width: 61vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid var(--main-violet);
 }
 
@@ -158,6 +158,50 @@ header {
     width: 80vw;
     display: flex;
     justify-content: space-between;
+}
+
+.hero-img-basket {
+    width: 140px;
+    height: 174px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px 6px;
+}
+
+.procuct-text {
+    flex-direction: column;
+    width: 145px;
+    color: #979797;
+    padding: 20px 10px;
+    border-right: 1px solid #dddddd;
+}
+
+div.procuct-text:last-child{
+    /* border-right: none; !!!!!!! NIE DZIAŁA */
+}
+
+.product-title {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.product-description {
+    font-size: 0.6rem;
+    padding: 20px 0;
+}
+
+button.delete-item {
+    background: #cb0a0d;
+    border: none;
+    text-transform: uppercase;
+    padding: 8px;
+    font-size: 0.7rem;
+    color: white;
+    outline: var(--main-violet);
 }
 
 /*HEROES SECTION*/
