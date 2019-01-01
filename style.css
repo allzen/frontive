@@ -129,11 +129,9 @@ a {
     z-index: 9001;
     background: rgba(0, 0, 0, 0.7);
     position: fixed;
-
 }
 
-.modal-content {
-    position: relative;
+.modal-content   {
     width: 61vw;
     display: flex;    
     justify-content: space-between;
@@ -145,6 +143,13 @@ a {
     justify-content: space-between;
 }
 
+.modal-header {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 77%;
+}
+
 @media screen and (max-width: 760px) {
     .modal-content {
         flex-wrap: wrap;
@@ -152,7 +157,7 @@ a {
 }
 
 button.close-modal {
-    position: absolute;
+    position: relative;
     top: 0%;
     left: 95%;
     font-size: 2rem;
