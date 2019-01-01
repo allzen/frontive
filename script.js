@@ -43,6 +43,21 @@ const displayModal = (hero) => {
   document.getElementById('modalWindow').style.display = 'block';
 }
 
+/*BASKET*/
+const displayHeroBasket = (hero) => {
+  const heroBasket = 
+  `
+  <div class="product">
+    <img id="" src="images/superman.jpg" class="hero-img-basket">
+    <div class="procuct-text">
+      <h4 class="product-title">Superman</h4>
+      <p class="product-description">Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. </p>
+      <button class="delete-item">Usuń z koszyka | &times; </button>
+    </div>
+  </div>
+`;
+}
+
 let heroes = [
   {
     name: 'Superman',
