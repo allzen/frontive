@@ -347,8 +347,8 @@ header {
     border-right: 1px solid var(--main-gray);
 }
 
-div.procuct-text:last-child{
-    /* border-right: none; !!!!!!! NIE DZIAŁA */
+div.procuct-text:last-child, div.procuct-text:only-child {
+    border: 0px solid white; /*sprawdzić, czy działa*/
 }
 
 .product-title {

@@ -27,7 +27,7 @@ document.getElementById('closeModal').addEventListener('click', () => {
 
 const displayModal = (hero) => {
   const modalTemplate =
-  `
+    `
       <img src="images/${hero.image}" class="hero-modal-img">
       <div class="modal-text">
           <h2 class="modal-title">I'm the ${hero.name}</h2>
@@ -44,18 +44,31 @@ const displayModal = (hero) => {
 }
 
 /*BASKET*/
-const displayHeroBasket = (hero) => {
-  const heroBasket = 
-  `
-  <div class="product">
-    <img id="" src="images/superman.jpg" class="hero-img-basket">
+const addHeroToBasket = (hero) => {
+  const heroBasketTemplate =
+    `
+    <img src="images/${hero.image}" class="hero-img-basket">
     <div class="procuct-text">
-      <h4 class="product-title">Superman</h4>
-      <p class="product-description">Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. </p>
+      <h4 class="product-title">${hero.name}</h4>
+      <p class="product-description">${hero.description}</p>
       <button class="delete-item">Usuń z koszyka | &times; </button>
     </div>
-  </div>
 `;
+
+  document.getElementById('addHeroButton').addEventListener('click', () => {
+    console.log("XD");
+    if (hero.isAvailable) {
+      document.getElementById('basketProducts').innerHTML = '';
+      document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
+      let index = heroes.findIndex((checkHero) => {
+        checkHero.name === hero.name;
+        return checkHero.name === hero.name;
+      });
+      heroes[index].isAvailable = false;
+    } else {
+      console.log("Nie możesz dodać drugiego herosa!");
+    }
+  });
 }
 
 let heroes = [
@@ -119,7 +132,12 @@ const addHero = (hero) => {
   document.getElementById('heroContainer').insertAdjacentHTML('beforeend', template);
   document.getElementById(openModalId).addEventListener("click", () => {
     displayModal(hero);
+    addHeroToBasket(hero);
   });
 }
 
-heroes.forEach(addHero);
+heroes.forEach((hero) => {
+  if (hero.isAvailable) {
+    addHero(hero);
+  }
+});
