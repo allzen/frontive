@@ -43,6 +43,18 @@ const displayModal = (hero) => {
   document.getElementById('modalWindow').style.display = 'block';
 }
 
+
+/*SUMMING PRICES*/
+const totalPriceOfBasket = () => {
+  let totalPrice = 9999;
+  heroes.forEach((hero) => {
+    if (hero.isAvailable === false) {
+      totalPrice += parseFloat(hero.price);
+    }
+  })
+  return totalPrice;
+}
+
 /*BASKET*/
 const addHeroToBasket = (hero) => {
   const heroBasketTemplate =
@@ -58,10 +70,10 @@ const addHeroToBasket = (hero) => {
 `;
 
   document.getElementById('addHeroButton').addEventListener('click', () => {
-    console.log("XD");
+    document.getElementById("basketPrice").innerHTML = totalPriceOfBasket();
     if (hero.isAvailable) {
       if (heroes.filter((hero) => hero.isAvailable === false).length = 0) {
-      document.getElementById('basketProducts').innerHTML = '';
+        document.getElementById('basketProducts').innerHTML = '';
       }
       document.getElementById('basketInfo').innerHTML = '';
       document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
@@ -72,10 +84,12 @@ const addHeroToBasket = (hero) => {
       heroes[index].isAvailable = false;
     } else {
       document.getElementById('modalContent').innerHTML = 'Nie możesz dodać tego samego Herosa drugi raz do koszyka!';
-      console.log("Nie możesz dodać drugiego herosa!");
+      document.getElementById('modalContent').style.padding = '50px';
     }
   });
 }
+
+
 
 let heroes = [
   {

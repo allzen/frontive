@@ -310,9 +310,16 @@ header {
 }
 
 .basket-title {
-    padding-right: 150px;
+    padding-right: 120px;
     margin-bottom: 25px;
     border-bottom: 1px solid var(--main-violet);
+}
+
+@media screen and (max-width: 1024px) {
+    .basket-title {
+        padding: 0;
+        border: none;
+    }
 }
 
 .basket-heading {
@@ -335,6 +342,14 @@ header {
     justify-content: center;
     color: #979797;
     border-right: 1px solid var(--main-gray);
+}
+
+@media screen and (max-width: 1024px) {
+    .basket-hero { 
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    }
 }
 
 .basket-hero:last-child {
@@ -415,4 +430,5 @@ footer {
     color: white;
     font-size: 0.8rem;
     text-align: center;
+    margin-top: 50px;
 }
