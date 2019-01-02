@@ -32,8 +32,8 @@ const displayModal = (hero) => {
       <div class="modal-text">
           <h2 class="modal-title">I'm the ${hero.name}</h2>
           <span class="modal-title-underline"></span>
-          <p class="modal-description">${hero.description}</p>
-          <p class="modal-price">Wynajem:${hero.price}</p>
+          <p class="modal-description"> ${hero.description}</p>
+          <p class="modal-price">Wynajem: ${hero.price}</p>
           <button id="addHeroButton" class="add-item">Dodaj do koszyka</button>
       </div>
   `;
@@ -47,18 +47,23 @@ const displayModal = (hero) => {
 const addHeroToBasket = (hero) => {
   const heroBasketTemplate =
     `
-    <img src="images/${hero.image}" class="hero-img-basket">
-    <div class="procuct-text">
-      <h4 class="product-title">${hero.name}</h4>
-      <p class="product-description">${hero.description}</p>
-      <button class="delete-item">Usuń z koszyka | &times; </button>
+    <div class="basket-hero">
+      <img src="images/${hero.image}" class="hero-img-basket">
+      <div class="product-text">
+        <h4 class="product-title">${hero.name}</h4>
+        <p class="product-description">${hero.description}</p>
+        <button class="delete-item">Usuń z koszyka | &times; </button>
+      </div>
     </div>
 `;
 
   document.getElementById('addHeroButton').addEventListener('click', () => {
     console.log("XD");
     if (hero.isAvailable) {
+      if (heroes.filter((hero) => hero.isAvailable === false).length = 0) {
       document.getElementById('basketProducts').innerHTML = '';
+      }
+      document.getElementById('basketInfo').innerHTML = '';
       document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
       let index = heroes.findIndex((checkHero) => {
         checkHero.name === hero.name;
@@ -66,6 +71,7 @@ const addHeroToBasket = (hero) => {
       });
       heroes[index].isAvailable = false;
     } else {
+      document.getElementById('modalContent').innerHTML = 'Nie możesz dodać tego samego Herosa drugi raz do koszyka!';
       console.log("Nie możesz dodać drugiego herosa!");
     }
   });

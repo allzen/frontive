@@ -315,9 +315,36 @@ header {
     border-bottom: 1px solid var(--main-violet);
 }
 
-.basket {
+.basket-heading {
     width: 80vw;
     display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.basket-hero {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #979797;
+    border-right: 1px solid var(--main-gray);
+}
+
+.basket-hero:last-child {
+    border: none;
+}
+
+.product-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -326,39 +353,14 @@ header {
     height: 174px;
 }
 
-.basket-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 10px 6px;
-}
-
-.procuct-text {
-    flex-direction: column;
-    width: 145px;
-    color: #979797;
-    padding: 20px 10px;
-    border-right: 1px solid var(--main-gray);
-}
-
-div.procuct-text:last-child, div.procuct-text:only-child {
-    border: 0px solid white; /*sprawdzić, czy działa*/
-}
-
 .product-title {
     text-transform: uppercase;
     font-weight: 400;
+
 }
 
 .product-description {
     font-size: 0.6rem;
-    padding: 20px 0;
 }
 
 button.delete-item {
