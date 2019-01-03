@@ -310,14 +310,56 @@ header {
 }
 
 .basket-title {
-    padding-right: 150px;
+    padding-right: 120px;
     margin-bottom: 25px;
     border-bottom: 1px solid var(--main-violet);
 }
 
-.basket {
+@media screen and (max-width: 1024px) {
+    .basket-title {
+        padding: 0;
+        border: none;
+    }
+}
+
+.basket-heading {
     width: 80vw;
     display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.basket-hero {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #979797;
+    border-right: 1px solid var(--main-gray);
+}
+
+@media screen and (max-width: 1024px) {
+    .basket-hero { 
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    }
+}
+
+.basket-hero:last-child {
+    border: none;
+}
+
+.product-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -326,39 +368,14 @@ header {
     height: 174px;
 }
 
-.basket-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 10px 6px;
-}
-
-.procuct-text {
-    flex-direction: column;
-    width: 145px;
-    color: #979797;
-    padding: 20px 10px;
-    border-right: 1px solid var(--main-gray);
-}
-
-div.procuct-text:last-child{
-    /* border-right: none; !!!!!!! NIE DZIAŁA */
-}
-
 .product-title {
     text-transform: uppercase;
     font-weight: 400;
+
 }
 
 .product-description {
     font-size: 0.6rem;
-    padding: 20px 0;
 }
 
 button.delete-item {
@@ -413,4 +430,5 @@ footer {
     color: white;
     font-size: 0.8rem;
     text-align: center;
+    margin-top: 50px;
 }

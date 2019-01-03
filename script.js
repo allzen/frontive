@@ -27,13 +27,13 @@ document.getElementById('closeModal').addEventListener('click', () => {
 
 const displayModal = (hero) => {
   const modalTemplate =
-  `
+    `
       <img src="images/${hero.image}" class="hero-modal-img">
       <div class="modal-text">
           <h2 class="modal-title">I'm the ${hero.name}</h2>
           <span class="modal-title-underline"></span>
-          <p class="modal-description">${hero.description}</p>
-          <p class="modal-price">Wynajem:${hero.price}</p>
+          <p class="modal-description"> ${hero.description}</p>
+          <p class="modal-price">Wynajem: ${hero.price}</p>
           <button id="addHeroButton" class="add-item">Dodaj do koszyka</button>
       </div>
   `;
@@ -43,20 +43,60 @@ const displayModal = (hero) => {
   document.getElementById('modalWindow').style.display = 'block';
 }
 
-/*BASKET*/
-const displayHeroBasket = (hero) => {
-  const heroBasket = 
-  `
-  <div class="product">
-    <img id="" src="images/superman.jpg" class="hero-img-basket">
-    <div class="procuct-text">
-      <h4 class="product-title">Superman</h4>
-      <p class="product-description">Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. Lorem ipsum et dolor sit amet. </p>
-      <button class="delete-item">Usuń z koszyka | &times; </button>
-    </div>
-  </div>
-`;
+
+/*SUMMING PRICES*/
+const totalPriceOfBasket = () => {
+  let totalPrice = 9999;
+  heroes.forEach((hero) => {
+    if (hero.isAvailable === false) {
+      totalPrice += parseFloat(hero.price);
+    }
+  })
+  return totalPrice;
 }
+
+
+/*BASKET*/
+const addHeroToBasket = (hero) => {
+  const heroBasketTemplate =
+    `
+    <div class="basket-hero">
+      <img src="images/${hero.image}" class="hero-img-basket">
+      <div class="product-text">
+        <h4 class="product-title">${hero.name}</h4>
+        <p class="product-description">${hero.description}</p>
+        <button id="deleteHeroButton" class="delete-item">Usuń z koszyka | &times; </button>
+      </div>
+    </div>
+`;
+
+  document.getElementById('addHeroButton').addEventListener('click', () => {
+    document.getElementById("basketPrice").innerHTML = totalPriceOfBasket();
+    if (hero.isAvailable) {
+      if (heroes.filter((hero) => hero.isAvailable === false).length = 0) {
+        document.getElementById('basketProducts').innerHTML = '';
+      }
+      document.getElementById('basketInfo').innerHTML = '';
+      document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
+      let index = heroes.findIndex((checkHero) => {
+        checkHero.name === hero.name;
+        /*DELETING HERO FROM BASKET*/
+        document.getElementById('deleteHeroButton').addEventListener('click', () => {
+          heroes.splice(document.getElementById('deleteHeroButton'));
+          document.getElementById('basketProducts').innerHTML = heroes;
+          heroes.isAvailable = true;
+        })
+        return checkHero.name === hero.name;
+      });
+      heroes[index].isAvailable = false;
+    } else {
+      document.getElementById('modalContent').innerHTML = 'Nie możesz dodać tego samego Herosa drugi raz do koszyka!';
+      document.getElementById('modalContent').style.padding = '50px';
+    }
+  });
+}
+
+
 
 let heroes = [
   {
@@ -119,7 +159,12 @@ const addHero = (hero) => {
   document.getElementById('heroContainer').insertAdjacentHTML('beforeend', template);
   document.getElementById(openModalId).addEventListener("click", () => {
     displayModal(hero);
+    addHeroToBasket(hero);
   });
 }
 
-heroes.forEach(addHero);
+heroes.forEach((hero) => {
+  if (hero.isAvailable) {
+    addHero(hero);
+  }
+});
