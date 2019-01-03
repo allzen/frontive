@@ -84,6 +84,7 @@ const addHeroToBasket = (hero) => {
         document.getElementById('deleteHeroButton').addEventListener('click', () => {
           heroes.splice(document.getElementById('deleteHeroButton'));
           document.getElementById('basketProducts').innerHTML = heroes;
+          heroes.isAvailable = true;
         })
         return checkHero.name === hero.name;
       });
