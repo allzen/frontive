@@ -55,6 +55,7 @@ const totalPriceOfBasket = () => {
   return totalPrice;
 }
 
+
 /*BASKET*/
 const addHeroToBasket = (hero) => {
   const heroBasketTemplate =
@@ -64,7 +65,7 @@ const addHeroToBasket = (hero) => {
       <div class="product-text">
         <h4 class="product-title">${hero.name}</h4>
         <p class="product-description">${hero.description}</p>
-        <button class="delete-item">Usuń z koszyka | &times; </button>
+        <button id="deleteHeroButton" class="delete-item">Usuń z koszyka | &times; </button>
       </div>
     </div>
 `;
@@ -79,6 +80,11 @@ const addHeroToBasket = (hero) => {
       document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
       let index = heroes.findIndex((checkHero) => {
         checkHero.name === hero.name;
+        /*DELETING HERO FROM BASKET*/
+        document.getElementById('deleteHeroButton').addEventListener('click', () => {
+          heroes.splice(document.getElementById('deleteHeroButton'));
+          document.getElementById('basketProducts').innerHTML = heroes;
+        })
         return checkHero.name === hero.name;
       });
       heroes[index].isAvailable = false;
