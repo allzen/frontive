@@ -41,12 +41,15 @@ const displayModal = (hero) => {
   document.getElementById('modalContent').innerHTML = '';
   document.getElementById('modalContent').insertAdjacentHTML('beforeend', modalTemplate);
   document.getElementById('modalWindow').style.display = 'block';
+  document.getElementById('addHeroButton').addEventListener('click', () => {
+    addHeroToBasket(hero);
+  });
 }
 
 
 /*SUMMING PRICES*/
 const totalPriceOfBasket = () => {
-  let totalPrice = 9999;
+  let totalPrice = 0;
   heroes.forEach((hero) => {
     if (hero.isAvailable === false) {
       totalPrice += parseFloat(hero.price);
@@ -58,45 +61,43 @@ const totalPriceOfBasket = () => {
 
 /*BASKET*/
 const addHeroToBasket = (hero) => {
+  const basketHeroId = `${hero.name}BasketHero`;
+  const deleteHeroId = `${hero.name}DeleteFromBasket`;
   const heroBasketTemplate =
     `
-    <div class="basket-hero">
+    <div id="${basketHeroId}" class="basket-hero">
       <img src="images/${hero.image}" class="hero-img-basket">
       <div class="product-text">
         <h4 class="product-title">${hero.name}</h4>
         <p class="product-description">${hero.description}</p>
-        <button id="deleteHeroButton" class="delete-item">Usuń z koszyka | &times; </button>
+        <button id="${deleteHeroId}" class="delete-item">Usuń z koszyka | &times; </button>
       </div>
     </div>
 `;
 
-  document.getElementById('addHeroButton').addEventListener('click', () => {
-    document.getElementById("basketPrice").innerHTML = totalPriceOfBasket();
-    if (hero.isAvailable) {
-      if (heroes.filter((hero) => hero.isAvailable === false).length = 0) {
-        document.getElementById('basketProducts').innerHTML = '';
-      }
-      document.getElementById('basketInfo').innerHTML = '';
-      document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
-      let index = heroes.findIndex((checkHero) => {
-        checkHero.name === hero.name;
-        /*DELETING HERO FROM BASKET*/
-        document.getElementById('deleteHeroButton').addEventListener('click', () => {
-          heroes.splice(document.getElementById('deleteHeroButton'));
-          document.getElementById('basketProducts').innerHTML = heroes;
-          heroes.isAvailable = true;
-        })
-        return checkHero.name === hero.name;
-      });
-      heroes[index].isAvailable = false;
-    } else {
-      document.getElementById('modalContent').innerHTML = 'Nie możesz dodać tego samego Herosa drugi raz do koszyka!';
-      document.getElementById('modalContent').style.padding = '50px';
+  if (hero.isAvailable) {
+    if (heroes.filter((hero) => hero.isAvailable === false).length === 0) {
+      document.getElementById('basketInfo').style.display = 'none';
     }
-  });
+    document.getElementById('basketProducts').insertAdjacentHTML('beforeend', heroBasketTemplate);
+    let index = heroes.findIndex((checkHero) => {
+      return checkHero.name === hero.name;
+    });
+    document.getElementById(deleteHeroId).addEventListener('click', () => {
+      heroes[index].isAvailable = true;
+      document.getElementById(basketHeroId).outerHTML = '';
+      document.getElementById("basketPrice").innerHTML = totalPriceOfBasket();
+      if (heroes.filter((hero) => hero.isAvailable === false).length === 0) {
+        document.getElementById('basketInfo').style.display = 'block';
+      }
+    });
+    heroes[index].isAvailable = false;
+    document.getElementById("basketPrice").innerHTML = totalPriceOfBasket();
+  } else {
+    document.getElementById('modalContent').innerHTML = 'Nie możesz dodać tego samego Herosa drugi raz do koszyka!';
+    document.getElementById('modalContent').style.padding = '50px';
+  }
 }
-
-
 
 let heroes = [
   {
@@ -159,7 +160,6 @@ const addHero = (hero) => {
   document.getElementById('heroContainer').insertAdjacentHTML('beforeend', template);
   document.getElementById(openModalId).addEventListener("click", () => {
     displayModal(hero);
-    addHeroToBasket(hero);
   });
 }
 
