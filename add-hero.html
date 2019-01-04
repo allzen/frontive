@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Frontive - 1</title>
+    <title>Frontive - formularz</title>
 </head>
 
 <body>
@@ -40,30 +40,28 @@
     <header>
         <img src="images/home-slide01.jpg" alt="header-image" class="header-img">
     </header>
-    <!--MODAL-->
-    <div id="modalWindow" class="modal">
-        <div class="modal-header">
-            <button id="closeModal" class="close-modal">&times;</button>
-        </div>
-        <div id="modalContent" class="modal-content">
-        </div>
-    </div>
-    <!--BASKET-->
-    <section class="basket-content">
-        <div class="basket-heading">
-            <h2 class="basket-title">Koszyk</h2>
-            <h2 class="price">Do zapłaty:</h2>
-            <h2 id="basketPrice" class="price"></h2>
-        </div>
-        <p id="basketInfo" class="basket-info">Twój koszyk jest pusty</p>
-        <div id="basketProducts" class="product">
-        </div>
-    </section>
-    <!--HEROES-->
-    <section class="hero-section">
-        <div id="heroContainer" class="hero-container">
-
-        </div>
+    <!--FORM-->
+    <section class="form-section">
+        <form action="#" method="post">
+            <h2 class="form-title">Dodaj herosa</h2>
+            <div class="add-hero-form">
+                <div>
+                    <input type="text" placeholder="Nazwa Bohatera">
+                </div>
+                <div>
+                    <input type="text" placeholder="Adres/nazwa zdjęcia">
+                </div>
+                <div>
+                    <input type="text" placeholder="Cena wynajmu /h">
+                </div>
+                <div>
+                    <textarea placeholder="Opis bohatera"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="form-button">Submit</button>
+                </div>
+            </div>
+        </form>
     </section>
     <!--FOOTER-->
     <footer>
