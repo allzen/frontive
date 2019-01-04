@@ -105,14 +105,18 @@ ul.main-nav.active {
     .main-nav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-end   
     }
     
     .main-nav li {
         border-right: 1px solid white;
         padding: 8px 20px 8px 20px;
     }
-
+    
+    .main-nav li:first-child {
+        margin: 10px;
+        padding-top: 15px;
+    }
     .main-nav li:last-child {
         border-right: none;
     }
@@ -305,7 +309,7 @@ header {
     width: 61vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /*zmienić na flex-start, gdy wpadną herosi!!!!!!!!!!!*/
+    justify-content: center; 
     border: 1px solid var(--main-violet);
 }
 
