@@ -1,5 +1,5 @@
 /*NAVBAR*/
-let mainNav = document.getElementById('main-nav__menu');
+let mainNav = document.getElementById('navMenu');
 
 let navBarToggle = document.getElementById('js-navbar-toggle');
 
@@ -28,13 +28,13 @@ document.getElementById('closeModal').addEventListener('click', () => {
 const displayModal = (hero) => {
   const modalTemplate =
     `
-      <img src="images/${hero.image}" class="hero-modal-img">
-      <div class="modal-text">
-          <h2 class="modal-title">I'm the ${hero.name}</h2>
-          <span class="modal-title-underline"></span>
-          <p class="modal-description"> ${hero.description}</p>
-          <p class="modal-price">Wynajem: ${hero.price}</p>
-          <button id="addHeroButton" class="add-item">Dodaj do koszyka</button>
+      <img src="images/${hero.image}" class="modal-content__hero-img">
+      <div class="modal-content__text">
+          <h2 class="modal-content__title">I'm the ${hero.name}</h2>
+          <span class="modal-content__title modal-content-title--underline"></span>
+          <p class="modal-content__description"> ${hero.description}</p>
+          <p class="modal-content__price">Wynajem: ${hero.price}</p>
+          <button id="addHeroButton" class="modal-content__button modal-content__button--green">Dodaj do koszyka</button>
       </div>
   `;
 

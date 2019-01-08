@@ -127,6 +127,24 @@ ul.main-nav__menu.active {
     }
 }
 
+/*HEADER*/
+.header {
+    margin-top: -100px;
+}
+
+.header__img {
+    background-size: cover;
+    background-position: 70% 60%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .header__img {
+        max-width: 100vw;
+        height: 60vw;
+    }
+}
+
 /*MODAL*/
 
 .modal {
@@ -152,14 +170,14 @@ ul.main-nav__menu.active {
     justify-content: space-between;
 }
 
-.modal-header {
+.modal__header {
     display: flex;
     position: fixed;
     margin: 10% 77%;
 }
 
 @media screen and (max-width: 1024px) {
-    .modal-header {
+    .modal__header {
         margin: 10% 71%;
     }
 }
@@ -170,7 +188,7 @@ ul.main-nav__menu.active {
     }
 }
 
-button.close-modal {
+.modal__button.modal__button--close {
     position: relative;
     top: 0%;
     left: 95%;
@@ -183,36 +201,36 @@ button.close-modal {
 }
 
 @media screen and (max-width: 760px) {
-    button.close-modal {
+    .modal__button--close {
         left: 90%;
     }
 }
 
-.modal-text {
+.modal-content__text{
     flex-direction: column;
     width: 65vw;
     padding-left: 50px;
 }
 
 @media screen and (max-width: 760px) {
-    .modal-text {
+    .modal-content__text {
         padding: 0;
         text-align: center;
     }
 }
 
-.hero-modal-img {
+.modal-content__hero-img {
     height: 250px;
     margin: auto 0;
 }
 
 @media screen and (max-width: 760px) {
-    .hero-modal-img {
+    .modal-content__hero-img {
         margin: 0 auto;
     }
 }
 
-.modal-title {
+.modal-content__title {
     flex-direction: column;
     font-weight: 600;
     font-size: 1.5rem;
@@ -220,12 +238,12 @@ button.close-modal {
 }
 
 @media screen and (max-width: 760px) {
-    .modal-title {
+    .modal-content__title {
         padding-top: 20px;
     }
 }
 
-.modal-title-underline {
+.modal-content__title--underline {
     transform: rotate(90deg);
     background: #beac96;
     width: 2px;
@@ -235,12 +253,12 @@ button.close-modal {
 }
 
 @media screen and (max-width: 760px) {
-    .modal-title-underline {
+    .modal-content__title--underline {
         display: none;
     }
 }
 
-.modal-description {
+.modal-content__description {
     flex-direction: column;
     padding: 40px 20px 0 0;
     color: var(--main-gray);
@@ -248,12 +266,12 @@ button.close-modal {
 }
 
 @media screen and (max-width: 760px) {
-    .modal-description {
+    .modal-content__description {
         padding-top: 10px;
     }
 }
 
-.modal-price {
+.modal-content__price {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -264,7 +282,7 @@ button.close-modal {
     border-bottom: 1px dashed var(--main-gray);
 }
 
-button.add-item {
+.modal-content__button--green {
     background: #00aa54;
     border: none;
     text-transform: uppercase;
@@ -273,27 +291,8 @@ button.add-item {
     outline: var(--main-violet);
 }
 
-button.add-item:hover {
+.modal-content__button--green:hover {
     background: #008d47;
-}
-
-/*HEADER*/
-
-header {
-    margin-top: -100px;
-}
-
-.header-img {
-    background-size: cover;
-    background-position: 70% 60%;
-    max-width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-    .header-img {
-        max-width: 100vw;
-        height: 60vw;
-    }
 }
 
 /*BASKET*/
