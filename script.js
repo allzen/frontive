@@ -1,5 +1,5 @@
 /*NAVBAR*/
-let mainNav = document.getElementById('nav-menu');
+let mainNav = document.getElementById('main-nav__menu');
 
 let navBarToggle = document.getElementById('js-navbar-toggle');
 
