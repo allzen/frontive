@@ -12,39 +12,39 @@
 <body>
     <!--NAVBAR-->
     <nav id="nav" class="navbar nav">
-        <span class="navbar-toggle" id="js-navbar-toggle">
-            <img src="images/hamburger-icon.png" alt="hamburger-icon" class="hamburger">
+        <span id="js-navbar-toggle" class="navbar-toggle">
+            <img src="images/hamburger-icon.png" alt="hamburger-icon" class="navbar__hamburger">
         </span>
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="page-logo" class="logo-img">
+        <a href="index.html" class="navbar__logo">
+            <img src="images/logo.png" alt="page-logo" class="navbar__logo-img">
         </a>
-        <ul class="main-nav" id="nav-menu">
+        <ul id="navMenu" class="main-nav__menu">
             <li>
-                <a href="add-hero.html" class="nav-links">Dodaj herosa</a>
+                <a href="add-hero.html">Dodaj herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Edytuj herosa</a>
+                <a href="#">Edytuj herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Usuń herosa</a>
+                <a href="#">Usuń herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Wyczyść bazę</a>
+                <a href="#">Wyczyść bazę</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Wczytaj herosów</a>
+                <a href="#">Wczytaj herosów</a>
             </li>
         </ul>
     </nav>
     <!--HEADER-->
-    <header>
-        <img src="images/home-slide01.jpg" alt="header-image" class="header-img">
+    <header class="header">
+        <img src="images/home-slide01.jpg" alt="header-image" class="header__img">
     </header>
     <!--FORM-->
-    <section class="form-section">
-        <form action="#" method="post">
-            <h2 class="form-title">Dodaj herosa</h2>
-            <div class="add-hero-form">
+    <section class="form">
+        <form class="form-content" action="#" method="post">
+            <h2 class="form-content__title">Dodaj herosa</h2>
+            <div class="form-content__inputs">
                 <div>
                     <input type="text" placeholder="Nazwa Bohatera">
                 </div>
@@ -58,14 +58,14 @@
                     <textarea placeholder="Opis bohatera"></textarea>
                 </div>
                 <div>
-                    <button type="submit" class="form-button">Submit</button>
+                    <button type="submit" class="rectangle-button form-content__button form-content__button--submit">Submit</button>
                 </div>
             </div>
         </form>
     </section>
     <!--FOOTER-->
     <footer>
-        <p class="footer-text">
+        <p>
             Need a hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o JavaScript
         </p>
     </footer>

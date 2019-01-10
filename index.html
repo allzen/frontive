@@ -12,55 +12,55 @@
 <body>
     <!--NAVBAR-->
     <nav id="nav" class="navbar nav">
-        <span class="navbar-toggle" id="js-navbar-toggle">
-            <img src="images/hamburger-icon.png" alt="hamburger-icon" class="hamburger">
+        <span id="js-navbar-toggle" class="navbar-toggle">
+            <img src="images/hamburger-icon.png" alt="hamburger-icon" class="navbar__hamburger">
         </span>
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="page-logo" class="logo-img">
+        <a href="index.html" class="navbar__logo">
+            <img src="images/logo.png" alt="page-logo" class="navbar__logo-img">
         </a>
-        <ul class="main-nav" id="nav-menu">
+        <ul id="navMenu" class="main-nav__menu">
             <li>
-                <a href="add-hero.html" class="nav-links">Dodaj herosa</a>
+                <a href="add-hero.html">Dodaj herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Edytuj herosa</a>
+                <a href="#">Edytuj herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Usuń herosa</a>
+                <a href="#">Usuń herosa</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Wyczyść bazę</a>
+                <a href="#">Wyczyść bazę</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Wczytaj herosów</a>
+                <a href="#">Wczytaj herosów</a>
             </li>
         </ul>
     </nav>
     <!--HEADER-->
-    <header>
-        <img src="images/home-slide01.jpg" alt="header-image" class="header-img">
+    <header class="header">
+        <img src="images/home-slide01.jpg" alt="header-image" class="header__img">
     </header>
     <!--MODAL-->
     <div id="modalWindow" class="modal">
-        <div class="modal-header">
-            <button id="closeModal" class="close-modal">&times;</button>
+        <div class="modal__header">
+            <button id="closeModal" class="modal__button modal__button--close">&times;</button>
         </div>
         <div id="modalContent" class="modal-content">
         </div>
     </div>
     <!--BASKET-->
-    <section class="basket-content">
-        <div class="basket-heading">
+    <section class="basket">
+        <div class="basket-header">
             <h2 class="basket-title">Koszyk</h2>
-            <h2 class="price">Do zapłaty:</h2>
-            <h2 id="basketPrice" class="price"></h2>
+            <h2>Do zapłaty:</h2>
+            <h2 id="basketPrice"></h2>
         </div>
         <p id="basketInfo" class="basket-info">Twój koszyk jest pusty</p>
-        <div id="basketProducts" class="product">
+        <div id="basketProducts" class="basket-products">
         </div>
     </section>
     <!--HEROES-->
-    <section class="hero-section">
+    <section class="heroes">
         <div id="heroContainer" class="hero-container">
 
         </div>

@@ -1,5 +1,5 @@
 /*NAVBAR*/
-let mainNav = document.getElementById('nav-menu');
+let mainNav = document.getElementById('navMenu');
 
 let navBarToggle = document.getElementById('js-navbar-toggle');
 
@@ -28,13 +28,13 @@ document.getElementById('closeModal').addEventListener('click', () => {
 const displayModal = (hero) => {
   const modalTemplate =
     `
-      <img src="images/${hero.image}" class="hero-modal-img">
-      <div class="modal-text">
-          <h2 class="modal-title">I'm the ${hero.name}</h2>
-          <span class="modal-title-underline"></span>
-          <p class="modal-description"> ${hero.description}</p>
-          <p class="modal-price">Wynajem: ${hero.price}</p>
-          <button id="addHeroButton" class="add-item">Dodaj do koszyka</button>
+      <img src="images/${hero.image}" class="modal-content__hero-img">
+      <div class="modal-content__text">
+          <h2 class="modal-content__title">I'm the ${hero.name}</h2>
+          <span class="modal-content__title modal-content-title--underline"></span>
+          <p class="modal-content__description"> ${hero.description}</p>
+          <p class="modal-content__price">Wynajem: ${hero.price}</p>
+          <button id="addHeroButton" class="rectangle-button modal-content__button modal-content__button--add">Dodaj do koszyka</button>
       </div>
   `;
 
@@ -65,12 +65,12 @@ const addHeroToBasket = (hero) => {
   const deleteHeroId = `${hero.name}DeleteFromBasket`;
   const heroBasketTemplate =
     `
-    <div id="${basketHeroId}" class="basket-hero">
-      <img src="images/${hero.image}" class="hero-img-basket">
-      <div class="product-text">
-        <h4 class="product-title">${hero.name}</h4>
-        <p class="product-description">${hero.description}</p>
-        <button id="${deleteHeroId}" class="delete-item">Usuń z koszyka | &times; </button>
+    <div id="${basketHeroId}" class="basket-products__hero">
+      <img src="images/${hero.image}" class="basket-products__hero-img">
+      <div class="basket-products__hero-text">
+        <h4 class="basket-products__hero-title">${hero.name}</h4>
+        <p class="basket-products__hero-description">${hero.description}</p>
+        <button id="${deleteHeroId}" class="rectangle-button basket-products__hero-button basket-products__hero-button--delete">Usuń z koszyka | &times; </button>
       </div>
     </div>
 `;
@@ -147,13 +147,13 @@ let heroes = [
 /*HEROES*/
 const addHero = (hero) => {
   let openModalId = `openModal${hero.name}`;
-  let template = `<div class="hero">
+  let template = `<div class="hero-container__hero">
     <a id="${openModalId}">
-        <img id="${hero.name}" src="images/${hero.image}" class="hero-img">
+        <img id="${hero.name}" src="images/${hero.image}" class="hero-container__hero-img">
     </a>
-    <div class="hero-description">
-        <h3 class="hero-name">${hero.name}</h3>
-        <p class="hero-price">Cena najmu: ${hero.price}</p>
+    <div>
+        <h3>${hero.name}</h3>
+        <p>Cena najmu: ${hero.price}</p>
     </div>
   </div>`;
 
