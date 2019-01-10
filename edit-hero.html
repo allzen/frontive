@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Frontive - add hero</title>
+    <title>Frontive - edit hero</title>
 </head>
 
 <body>
@@ -43,22 +43,22 @@
     <!--FORM-->
     <section class="form">
         <form class="form-content" action="#" method="post">
-            <h2 class="form-content__title">Dodaj herosa</h2>
+            <h2 class="form-content__title">Edytuj herosa</h2>
             <div class="form-content__inputs">
+                <label for="edit-hero">Wybierz istniejącego herosa:</label>
                 <div>
-                    <input type="text" placeholder="Nazwa Bohatera">
+                    <select id="edit-hero">
+                        <option value="">---WYBIERZ---</option>
+                        <option value="superman">Superman</option>
+                        <option value="hulk">Hulk</option>
+                        <option value="thor">Thor</option>
+                        <option value="ironman">Ironman</option>
+                        <option value="potter">Potter</option>
+                        <option value="batman">Batman</option>
+                    </select>
                 </div>
                 <div>
-                    <input type="text" placeholder="Adres/nazwa zdjęcia">
-                </div>
-                <div>
-                    <input type="text" placeholder="Cena wynajmu /h">
-                </div>
-                <div>
-                    <textarea placeholder="Opis bohatera"></textarea>
-                </div>
-                <div>
-                    <button type="submit" class="rectangle-button form-content__button form-content__button--submit">Submit</button>
+                    <button type="submit" class="rectangle-button form-content__button form-content__button--submit">Edytuj</button>
                 </div>
             </div>
         </form>
