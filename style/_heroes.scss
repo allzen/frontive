@@ -1,0 +1,22 @@
+/*HEROES SECTION*/
+.hero-container {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-container__hero {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.hero-container__hero-img {
+    width: 300px;
+    top: 0;
+    cursor: pointer;
+}

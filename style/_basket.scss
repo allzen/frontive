@@ -1,0 +1,72 @@
+/*BASKET*/
+.basket {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    width: 61vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid $main-violet;
+}
+
+.basket-header {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-title {
+    padding-right: 120px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $main-violet;
+    @media screen and (max-width: $break-md) {
+        padding: 0;
+        border: none;
+    }
+}
+
+.basket-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.basket-products__hero {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #979797;
+    border-right: 1px solid $main-gray;
+    &:last-child {
+        border: none;
+    }
+    @media screen and (max-width: $break-md) {
+        margin: 0 auto;
+        border: none;
+        padding: 10px;
+    }
+}
+
+.basket-products__hero-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.basket-products__hero-img {
+    width: 140px;
+    height: 174px;
+}
+
+.basket-products__hero-title {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.basket-products__hero-description {
+    font-size: 0.6rem;
+}
