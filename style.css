@@ -226,6 +226,137 @@
   border-top: 1px dashed #aeafaa;
   border-bottom: 1px dashed #aeafaa; }
 
+/*BASKET*/
+.basket {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  width: 61vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #261d52; }
+
+.basket-header {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between; }
+
+.basket-title {
+  padding-right: 120px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #261d52; }
+
+@media screen and (max-width: 1024px) {
+  .basket-title {
+    padding: 0;
+    border: none; } }
+.basket-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.basket-products__hero {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #979797;
+  border-right: 1px solid #aeafaa; }
+  .basket-products__hero:last-child {
+    border: none; }
+
+@media screen and (max-width: 1024px) {
+  .basket-products__hero {
+    margin: 0 auto;
+    border: none;
+    padding: 10px; } }
+.basket-products__hero-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.basket-products__hero-img {
+  width: 140px;
+  height: 174px; }
+
+.basket-products__hero-title {
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.basket-products__hero-description {
+  font-size: 0.6rem; }
+
+/*HEROES SECTION*/
+.hero-container {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  position: relative; }
+
+.hero-container__hero {
+  margin: 10px;
+  overflow: hidden; }
+
+.hero-container__hero-img {
+  width: 300px;
+  top: 0;
+  cursor: pointer; }
+
+/*FORM*/
+.form {
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.form-content {
+  box-shadow: 0px 2px 10px rgba(32, 32, 32, 0.7);
+  width: 450px;
+  height: 500px; }
+
+.form-content__title {
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 20px; }
+
+.form-content__inputs {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  justify-content: center; }
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #aeafaa;
+  padding: 10px;
+  width: 350px;
+  margin: 10px; }
+
+/*FOOTER*/
+footer {
+  background-color: #261d52;
+  max-width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 50px; }
+
 * {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
