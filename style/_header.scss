@@ -1,4 +1,5 @@
 /*HEADER*/
+
 .header {
     margin-top: -100px;
 }
@@ -7,10 +8,7 @@
     background-size: cover;
     background-position: 70% 60%;
     max-width: 100%;
-}
-
-@media screen and (max-width: $break-md) {
-    .header__img {
+    @media screen and (max-width: $break-md) {
         max-width: 100vw;
         height: 60vw;
     }

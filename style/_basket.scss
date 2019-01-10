@@ -20,10 +20,7 @@
     padding-right: 120px;
     margin-bottom: 25px;
     border-bottom: 1px solid $main-violet;
-}
-
-@media screen and (max-width: $break-md) {
-    .basket-title {
+    @media screen and (max-width: $break-md) {
         padding: 0;
         border: none;
     }
@@ -43,13 +40,10 @@
     justify-content: center;
     color: #979797;
     border-right: 1px solid $main-gray;
-    &:last-child{
+    &:last-child {
         border: none;
     }
-}
-
-@media screen and (max-width: $break-md) {
-    .basket-products__hero {
+    @media screen and (max-width: $break-md) {
         margin: 0 auto;
         border: none;
         padding: 10px;

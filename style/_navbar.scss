@@ -38,7 +38,7 @@
 .main-nav__menu {
     display: none;
     list-style-type: none;
-    &.active { //NIE DZIAŁA NA MAŁYCH EKRANACH CZARNE TŁŁO
+    &.active { 
         background: rgba(32, 32, 32, 1);
         min-height: 210px;
     }
@@ -51,7 +51,6 @@
             padding-top: 20px;
         }
     }
-
 }
 
 .navbar__logo {

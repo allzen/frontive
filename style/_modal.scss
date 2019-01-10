@@ -21,23 +21,17 @@
     margin: 10% auto;
     padding: 20px 30px 30px;
     justify-content: space-between;
+    @media screen and (max-width: $break-xs) {
+        flex-wrap: wrap;
+    }
 }
 
 .modal__header {
     display: flex;
     position: fixed;
     margin: 10% 77%;
-}
-
-@media screen and (max-width: $break-md) {
-    .modal__header {
+    @media screen and (max-width: $break-md) {
         margin: 10% 71%;
-    }
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content {
-        flex-wrap: wrap;
     }
 }
 
@@ -51,22 +45,16 @@
     text-transform: uppercase;
     color: $main-gray;
     cursor: pointer;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal__button--close {
+    @media screen and (max-width: $break-xs) {
         left: 90%;
     }
 }
 
-.modal-content__text{
+.modal-content__text {
     flex-direction: column;
     width: 65vw;
     padding-left: 50px;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content__text {
+    @media screen and (max-width: $break-xs) {
         padding: 0;
         text-align: center;
     }
@@ -75,10 +63,7 @@
 .modal-content__hero-img {
     height: 250px;
     margin: auto 0;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content__hero-img {
+    @media screen and (max-width: $break-xs) {
         margin: 0 auto;
     }
 }
@@ -88,10 +73,7 @@
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content__title {
+    @media screen and (max-width: $break-xs) {
         padding-top: 20px;
     }
 }
@@ -103,10 +85,7 @@
     height: 30px;
     margin: 5px 15px;
     position: absolute;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content__title--underline {
+    @media screen and (max-width: $break-xs) {
         display: none;
     }
 }
@@ -116,10 +95,7 @@
     padding: 40px 20px 0 0;
     color: $main-gray;
     font-size: 0.8rem;
-}
-
-@media screen and (max-width: $break-xs) {
-    .modal-content__description {
+    @media screen and (max-width: $break-xs) {
         padding-top: 10px;
     }
 }
