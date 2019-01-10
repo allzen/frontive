@@ -34,7 +34,7 @@ const displayModal = (hero) => {
           <span class="modal-content__title modal-content-title--underline"></span>
           <p class="modal-content__description"> ${hero.description}</p>
           <p class="modal-content__price">Wynajem: ${hero.price}</p>
-          <button id="addHeroButton" class="modal-content__button modal-content__button--green">Dodaj do koszyka</button>
+          <button id="addHeroButton" class="rectangle-button modal-content__button modal-content__button--add">Dodaj do koszyka</button>
       </div>
   `;
 
@@ -65,12 +65,12 @@ const addHeroToBasket = (hero) => {
   const deleteHeroId = `${hero.name}DeleteFromBasket`;
   const heroBasketTemplate =
     `
-    <div id="${basketHeroId}" class="basket-hero">
-      <img src="images/${hero.image}" class="hero-img-basket">
-      <div class="product-text">
-        <h4 class="product-title">${hero.name}</h4>
-        <p class="product-description">${hero.description}</p>
-        <button id="${deleteHeroId}" class="delete-item">Usuń z koszyka | &times; </button>
+    <div id="${basketHeroId}" class="basket-products__hero">
+      <img src="images/${hero.image}" class="basket-products__hero-img">
+      <div class="basket-products__hero-text">
+        <h4 class="basket-products__hero-title">${hero.name}</h4>
+        <p class="basket-products__hero-description">${hero.description}</p>
+        <button id="${deleteHeroId}" class="rectangle-button basket-products__hero-button basket-products__hero-button--delete">Usuń z koszyka | &times; </button>
       </div>
     </div>
 `;
