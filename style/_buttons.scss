@@ -1,0 +1,32 @@
+/*BUTTONS*/
+.rectangle-button {
+    border: none;
+    text-transform: uppercase;
+    color: $main-white;
+}
+
+.modal-content__button--add {
+    background: #00aa54;
+    padding: 10px 30px; 
+    &:hover {
+        background: #008d47;
+    }
+}
+
+.basket-products__hero-button--delete  {
+    background: #cb0a0d;
+    padding: 8px;
+    font-size: 0.7rem;
+    &:hover {
+        background: #b40a0c;
+    }
+}
+
+.form-content__button--submit {
+    background-color: #5f92c9;
+    margin: 40px 0 0 100px;
+    padding: 10px 50px;
+    &:hover {
+        background: #4c74a0;
+    }
+}
