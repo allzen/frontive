@@ -1,0 +1,136 @@
+/*MODAL*/
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9001;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+}
+
+.modal-content {
+    width: 61vw;
+    display: flex;
+    justify-content: space-between;
+    background: $main-white;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 10% auto;
+    padding: 20px 30px 30px;
+    justify-content: space-between;
+}
+
+.modal__header {
+    display: flex;
+    position: fixed;
+    margin: 10% 77%;
+}
+
+@media screen and (max-width: $break-md) {
+    .modal__header {
+        margin: 10% 71%;
+    }
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content {
+        flex-wrap: wrap;
+    }
+}
+
+.modal__button.modal__button--close {
+    position: relative;
+    top: 0%;
+    left: 95%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    color: $main-gray;
+    cursor: pointer;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal__button--close {
+        left: 90%;
+    }
+}
+
+.modal-content__text{
+    flex-direction: column;
+    width: 65vw;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content__text {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.modal-content__hero-img {
+    height: 250px;
+    margin: auto 0;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content__hero-img {
+        margin: 0 auto;
+    }
+}
+
+.modal-content__title {
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content__title {
+        padding-top: 20px;
+    }
+}
+
+.modal-content__title--underline {
+    transform: rotate(90deg);
+    background: #beac96;
+    width: 2px;
+    height: 30px;
+    margin: 5px 15px;
+    position: absolute;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content__title--underline {
+        display: none;
+    }
+}
+
+.modal-content__description {
+    flex-direction: column;
+    padding: 40px 20px 0 0;
+    color: $main-gray;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: $break-xs) {
+    .modal-content__description {
+        padding-top: 10px;
+    }
+}
+
+.modal-content__price {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px 0 20px;
+    border-top: 1px dashed $main-gray;
+    border-bottom: 1px dashed $main-gray;
+}
