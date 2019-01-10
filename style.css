@@ -396,23 +396,19 @@ ul.main-nav__menu.active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
-.hero {
+.hero-container__hero {
     margin: 10px;
     overflow: hidden;
-    position: relative;
-    cursor: pointer;
 }
 
-.hero-img {
+.hero-container__hero-img {
     width: 300px;
-    position: relative;
     top: 0;
-}
-
-.hero-description {
-    text-align: center;
+    cursor: pointer;
 }
 
 /*FORM*/

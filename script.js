@@ -147,13 +147,13 @@ let heroes = [
 /*HEROES*/
 const addHero = (hero) => {
   let openModalId = `openModal${hero.name}`;
-  let template = `<div class="hero">
+  let template = `<div class="hero-container__hero">
     <a id="${openModalId}">
-        <img id="${hero.name}" src="images/${hero.image}" class="hero-img">
+        <img id="${hero.name}" src="images/${hero.image}" class="hero-container__hero-img">
     </a>
-    <div class="hero-description">
-        <h3 class="hero-name">${hero.name}</h3>
-        <p class="hero-price">Cena najmu: ${hero.price}</p>
+    <div>
+        <h3>${hero.name}</h3>
+        <p>Cena najmu: ${hero.price}</p>
     </div>
   </div>`;
 
