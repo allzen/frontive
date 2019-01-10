@@ -50,6 +50,16 @@ a {
     background: #b40a0c;
 }
 
+.form-content__button--submit {
+    background-color: #5f92c9;
+    margin: 40px 0 0 100px;
+    padding: 10px 50px;
+}
+
+.form-content__button--submit:hover {
+    background: #4c74a0;
+}
+
 /*NAVBAR*/
 .navbar {
     font-size: 1rem;
@@ -413,7 +423,7 @@ ul.main-nav__menu.active {
 
 /*FORM*/
 
-.form-section {
+.form {
     margin: 0 auto;
     padding-top: 50px;
     max-width: 70vw;
@@ -422,7 +432,13 @@ ul.main-nav__menu.active {
     justify-content: center;
 }
 
-.form-title {
+.form-content {
+    box-shadow: 0px 2px 10px rgba(32, 32, 32, 0.7);
+    width: 450px;
+    height: 500px;
+}
+
+.form-content__title {
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
@@ -430,14 +446,8 @@ ul.main-nav__menu.active {
     padding: 20px;
 }
 
-form {
-    box-shadow: 0px 2px 10px rgba(32, 32, 32, 0.7);
-    width: 450px;
-    height: 500px;
-}
-
-.add-hero-form {
-    margin: 0 auto !important;
+.form-content__inputs{
+    margin: 0 auto;
     flex-wrap: wrap;
     padding-left: 50px;
     justify-content: center;
@@ -450,18 +460,6 @@ textarea {
     padding: 10px;
     width: 350px;
     margin: 10px;
-}
-
-button.form-button {
-    border: none;
-    background-color: #5f92c9;
-    margin: 40px 0 0 100px;
-    padding: 10px 50px;
-    color: white;
-}
-
-button.form-button:hover {
-    background: #4c74a0;
 }
 
 /*FOOTER*/
