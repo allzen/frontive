@@ -42,20 +42,20 @@
     </header>
     <!--FORM-->
     <section class="form">
-        <form class="form-content" action="#" method="post">
+        <form id="addHeroForm" class="form-content" action="#" method="post">
             <h2 class="form-content__title">Dodaj herosa</h2>
             <div class="form-content__inputs">
                 <div>
-                    <input type="text" placeholder="Nazwa Bohatera">
+                    <input name="name" type="text" placeholder="Nazwa Bohatera">
                 </div>
                 <div>
-                    <input type="text" placeholder="Adres/nazwa zdjęcia">
+                    <input name="src" type="text" placeholder="Adres/nazwa zdjęcia">
                 </div>
                 <div>
-                    <input type="text" placeholder="Cena wynajmu /h">
+                    <input name="price" type="text" placeholder="Cena wynajmu /h">
                 </div>
                 <div>
-                    <textarea placeholder="Opis bohatera"></textarea>
+                    <textarea name="description" placeholder="Opis bohatera"></textarea>
                 </div>
                 <div>
                     <button type="submit" class="rectangle-button form-content__button form-content__button--submit">Submit</button>
